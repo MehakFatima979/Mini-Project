@@ -17,7 +17,7 @@ namespace FYP1
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=HAIER-PC\SQLEXPRESS;Initial Catalog=projectA;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-DOTOD0U\SQLEXPRESS;Initial Catalog=ProjectA;Integrated Security=True");
 
         int id = 0;
 
@@ -75,6 +75,13 @@ namespace FYP1
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Home c = new Home();
+            c.Show();
+            this.Hide();
         }
     }
 }

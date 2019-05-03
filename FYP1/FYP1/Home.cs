@@ -102,5 +102,10 @@ namespace FYP1
             this.Hide();
             f.Show();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

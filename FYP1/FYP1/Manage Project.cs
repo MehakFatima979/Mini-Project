@@ -22,7 +22,7 @@ namespace FYP1
         {
 
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=HAIER-PC\SQLEXPRESS;Initial Catalog=projectA;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-DOTOD0U\SQLEXPRESS;Initial Catalog=ProjectA;Integrated Security=True");
 
         int id = 0;
         private void button1_Click(object sender, EventArgs e)
@@ -99,9 +99,11 @@ namespace FYP1
 
         private void Manage_Project_Load(object sender, EventArgs e)
         {
+            conn.Open();
             DataTable dt = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter("Select * from Project", conn);
             adapter.Fill(dt);
+            conn.Close();
             dataGridViewprojects.DataSource = dt;
         }
 
@@ -148,6 +150,11 @@ namespace FYP1
             Home c = new Home();
             this.Hide();
             c.Show();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

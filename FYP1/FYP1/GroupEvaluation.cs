@@ -21,7 +21,7 @@ namespace FYP1
         {
 
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=HAIER-PC\SQLEXPRESS;Initial Catalog=projectA;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-DOTOD0U\SQLEXPRESS;Initial Catalog=ProjectA;Integrated Security=True");
 
         int id = 0;
         private void btndone_Click(object sender, EventArgs e)
@@ -45,6 +45,7 @@ namespace FYP1
                     txtevaluation.Text = "";
                     txtmarks.Text = "";
                     id = 0;
+                    conn.Close();
                 }
                 else
                 {
@@ -63,7 +64,7 @@ namespace FYP1
             try
             {
                 DataTable dt = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter("Select * from [Group]", conn);
+                SqlDataAdapter adapter = new SqlDataAdapter("Select [Group].*,GroupStudent.AssignmentDate,Student.RegistrationNo from [Group] join GroupStudent on [Group].Id=GroupStudent.GroupId join Student on GroupStudent.StudentId=Student.Id", conn);
                 adapter.Fill(dt);
                 dataGridGroplist.DataSource = dt;
 
@@ -80,6 +81,18 @@ namespace FYP1
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Home c = new Home();
+            this.Hide();
+            c.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Home c = new Home();
             this.Hide();

@@ -17,7 +17,7 @@ namespace FYP1
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=HAIER-PC\SQLEXPRESS;Initial Catalog=projectA;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-DOTOD0U\SQLEXPRESS;Initial Catalog=ProjectA;Integrated Security=True");
 
         int id = 0;
 
@@ -29,7 +29,7 @@ namespace FYP1
             dataGridProject.DataSource = dt;
 
             DataTable dt1 = new DataTable();
-            SqlDataAdapter adapter1 = new SqlDataAdapter("Select Distinct GroupId from GroupStudent", conn);
+            SqlDataAdapter adapter1 = new SqlDataAdapter("Select Distinct GroupStudent.GroupId,GroupStudent.AssignmentDate,Student.RegistrationNo,Person.FirstName++Person.LastName as Name from GroupStudent join Student on GroupStudent.StudentID=Student.ID join Person on Person.Id=Student.Id", conn);
             adapter1.Fill(dt1);
             dataGridGroupList.DataSource = dt1;
         }
@@ -80,6 +80,18 @@ namespace FYP1
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Home c = new Home();
+            this.Hide();
+            c.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Home c = new Home();
             this.Hide();

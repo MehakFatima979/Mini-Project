@@ -41,6 +41,7 @@
             this.btnadd = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGroupList)).BeginInit();
             this.panel1.SuspendLayout();
@@ -157,6 +158,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.linkLabel2);
             this.panel1.Controls.Add(this.dataGridProject);
             this.panel1.Controls.Add(this.dataGridGroupList);
             this.panel1.Controls.Add(this.btnadd);
@@ -173,6 +175,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(711, 480);
             this.panel1.TabIndex = 13;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(12, 7);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(79, 13);
+            this.linkLabel2.TabIndex = 12;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Back To Home";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // Group_Project
             // 
@@ -208,5 +222,6 @@
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

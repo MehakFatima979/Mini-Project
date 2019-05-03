@@ -42,6 +42,7 @@
             this.comboadvisorrole = new System.Windows.Forms.ComboBox();
             this.dateTimedate = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProjectList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridadvisorlist)).BeginInit();
             this.panel1.SuspendLayout();
@@ -166,6 +167,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.dataGridProjectList);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -185,6 +187,17 @@
             this.panel1.Size = new System.Drawing.Size(839, 439);
             this.panel1.TabIndex = 15;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(10, 9);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(79, 13);
+            this.linkLabel1.TabIndex = 15;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Back To Home";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // AssignAdvisor
             // 
@@ -219,5 +232,6 @@
         private System.Windows.Forms.ComboBox comboadvisorrole;
         private System.Windows.Forms.DateTimePicker dateTimedate;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -20,13 +20,13 @@ namespace FYP1
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=HAIER-PC\SQLEXPRESS;Initial Catalog=projectA;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-DOTOD0U\SQLEXPRESS;Initial Catalog=ProjectA;Integrated Security=True");
 
    
         private void EvaluationList_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter("Select Project.Title,Project.Description,Advisor.Salary,Lookup.Value,ProjectAdvisor.AssignmentDate,Person.FirstName,Person.LastName,GroupProject.GroupId,[Group].Created_On,GroupStudent.StudentId,Student.RegistrationNo,GroupEvaluation.ObtainedMarks,Evaluation.Name,Evaluation.TotalMarks,Evaluation.TotalWeightage from Project join ProjectAdvisor on ProjectAdvisor.ProjectId=Project.Id join Advisor on Advisor.Id=ProjectAdvisor.AdvisorId join Lookup on Lookup.Id=Advisor.Designation join Person on Person.Id=Advisor.Id join GroupProject on GroupProject.ProjectId=Project.Id join [Group] on [Group].Id=GroupProject.GroupId join GroupStudent on GroupStudent.GroupId=[Group].Id join Student on Student.Id=GroupStudent.StudentId join GroupEvaluation on GroupEvaluation.GroupId=[Group].Id join Evaluation on Evaluation.Id=GroupEvaluation.EvaluationId", conn);
+            SqlDataAdapter adapter = new SqlDataAdapter("Select Project.Title,Project.Description,Advisor.Salary,Lookup.Value,ProjectAdvisor.AssignmentDate,Person.FirstName+Person.LastName,GroupProject.GroupId,[Group].Created_On,GroupStudent.StudentId,Student.RegistrationNo,GroupEvaluation.ObtainedMarks,Evaluation.Name,Evaluation.TotalMarks,Evaluation.TotalWeightage from Project join ProjectAdvisor on ProjectAdvisor.ProjectId=Project.Id join Advisor on Advisor.Id=ProjectAdvisor.AdvisorId join Lookup on Lookup.Id=Advisor.Designation join Person on Person.Id=Advisor.Id join GroupProject on GroupProject.ProjectId=Project.Id join [Group] on [Group].Id=GroupProject.GroupId join GroupStudent on GroupStudent.GroupId=[Group].Id join Student on Student.Id=GroupStudent.StudentId join GroupEvaluation on GroupEvaluation.GroupId=[Group].Id join Evaluation on Evaluation.Id=GroupEvaluation.EvaluationId", conn);
             adapter.Fill(dt);
             dataGridEvaluation.DataSource = dt;
             this.dataGridEvaluation.Columns[2].Visible = false;

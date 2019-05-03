@@ -17,7 +17,7 @@ namespace FYP1
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=HAIER-PC\SQLEXPRESS;Initial Catalog=projectA;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-DOTOD0U\SQLEXPRESS;Initial Catalog=ProjectA;Integrated Security=True");
 
         private void btncopy_Click(object sender, EventArgs e)
         {
@@ -97,7 +97,7 @@ namespace FYP1
                 cdn.SelectCommand.ExecuteNonQuery();
                 for (int i = 0; i < dataGridViewGroup.Rows.Count; i++)
                 {
-                    SqlCommand cmd = new SqlCommand("insert into GroupStudent(GroupId,StudentId,Status,AssignmentDate) Values((select Distinct(Id) from [Group] where Created_On='" + Convert.ToDateTime(dateTimeCreated.Text).ToString() + "'),(select Id from Student where RegistrationNo='" + dataGridViewGroup.Rows[i].Cells[2].Value.ToString() + "'),(Select Id from Lookup where Value='" + comboBoxcreated.Text + "'),'" + Convert.ToDateTime(dateTimeassignment.Text).ToString() + "')", conn);
+                    SqlCommand cmd = new SqlCommand("insert into GroupStudent(GroupId,StudentId,Status,AssignmentDate) Values((select max(Id) from [Group] where Created_On='" + Convert.ToDateTime(dateTimeCreated.Text).ToString() + "'),(select Id from Student where RegistrationNo='" + dataGridViewGroup.Rows[i].Cells[2].Value.ToString() + "'),(Select Id from Lookup where Value='" + comboBoxcreated.Text + "'),'" + Convert.ToDateTime(dateTimeassignment.Text).ToString() + "')", conn);
 
                     cmd.ExecuteNonQuery();
 
@@ -139,6 +139,11 @@ namespace FYP1
             Home c = new Home();
             this.Hide();
             c.Show();
+        }
+
+        private void Group_Students_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

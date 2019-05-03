@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.dataGridViewstudentdetails = new System.Windows.Forms.DataGridView();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RegistratioNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btncopy = new System.Windows.Forms.Button();
             this.btnFetch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,16 +46,7 @@
             this.dateTimeassignment = new System.Windows.Forms.DateTimePicker();
             this.dateTimeCreated = new System.Windows.Forms.DateTimePicker();
             this.btnadd = new System.Windows.Forms.Button();
-            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RegistratioNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewGroup = new System.Windows.Forms.DataGridView();
-            this.btndelete = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +54,7 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btndelete = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewstudentdetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroup)).BeginInit();
@@ -80,6 +80,47 @@
             this.dataGridViewstudentdetails.TabIndex = 0;
             this.dataGridViewstudentdetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewstudentdetails_CellContentClick);
             this.dataGridViewstudentdetails.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewstudentdetails_MouseClick);
+            // 
+            // Select
+            // 
+            this.Select.HeaderText = "Select";
+            this.Select.Name = "Select";
+            // 
+            // FirstName
+            // 
+            this.FirstName.HeaderText = "FirstName";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.HeaderText = "LastName";
+            this.LastName.Name = "LastName";
+            // 
+            // RegistratioNo
+            // 
+            this.RegistratioNo.HeaderText = "RegistrationNo";
+            this.RegistratioNo.Name = "RegistratioNo";
+            // 
+            // Contact
+            // 
+            this.Contact.HeaderText = "Contact";
+            this.Contact.Name = "Contact";
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
+            // Gender
+            // 
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            // 
+            // DateOfBirth
+            // 
+            this.DateOfBirth.HeaderText = "DateOfBirth";
+            this.DateOfBirth.Name = "DateOfBirth";
             // 
             // btncopy
             // 
@@ -165,47 +206,6 @@
             this.btnadd.UseVisualStyleBackColor = true;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
-            // Select
-            // 
-            this.Select.HeaderText = "Select";
-            this.Select.Name = "Select";
-            // 
-            // FirstName
-            // 
-            this.FirstName.HeaderText = "FirstName";
-            this.FirstName.Name = "FirstName";
-            // 
-            // LastName
-            // 
-            this.LastName.HeaderText = "LastName";
-            this.LastName.Name = "LastName";
-            // 
-            // RegistratioNo
-            // 
-            this.RegistratioNo.HeaderText = "RegistrationNo";
-            this.RegistratioNo.Name = "RegistratioNo";
-            // 
-            // Contact
-            // 
-            this.Contact.HeaderText = "Contact";
-            this.Contact.Name = "Contact";
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "Gender";
-            this.Gender.Name = "Gender";
-            // 
-            // DateOfBirth
-            // 
-            this.DateOfBirth.HeaderText = "DateOfBirth";
-            this.DateOfBirth.Name = "DateOfBirth";
-            // 
             // dataGridViewGroup
             // 
             this.dataGridViewGroup.AllowUserToAddRows = false;
@@ -225,16 +225,6 @@
             this.dataGridViewGroup.TabIndex = 12;
             this.dataGridViewGroup.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewGroup_CellClick);
             this.dataGridViewGroup.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewGroup_CellContentClick);
-            // 
-            // btndelete
-            // 
-            this.btndelete.Location = new System.Drawing.Point(688, 501);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(102, 32);
-            this.btndelete.TabIndex = 13;
-            this.btndelete.Text = "Delete";
-            this.btndelete.UseVisualStyleBackColor = true;
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -272,6 +262,16 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "DateOfBirth";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
+            // btndelete
+            // 
+            this.btndelete.Location = new System.Drawing.Point(688, 501);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(102, 32);
+            this.btndelete.TabIndex = 13;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -303,6 +303,7 @@
             this.Controls.Add(this.dataGridViewstudentdetails);
             this.Name = "Group_Students";
             this.Text = "Group_Students";
+            this.Load += new System.EventHandler(this.Group_Students_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewstudentdetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroup)).EndInit();
             this.ResumeLayout(false);
