@@ -43,3 +43,25 @@ C:\semester 4\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.Manage_Project.resources
 C:\semester 4\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.Properties.Resources.resources
 C:\semester 4\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.Student.resources
 C:\semester 4\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.csproj.GenerateResource.Cache
+C:\Git\Mini-Project\FYP1\FYP1\bin\Debug\FYP1.exe.config
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.exe
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.pdb
+C:\Git\Mini-Project\FYP1\FYP1\bin\Debug\FYP1.exe
+C:\Git\Mini-Project\FYP1\FYP1\bin\Debug\FYP1.pdb
+C:\Git\Mini-Project\FYP1\FYP1\bin\Debug\itextsharp.dll
+C:\Git\Mini-Project\FYP1\FYP1\bin\Debug\itextsharp.xml
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.csprojResolveAssemblyReference.cache
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.Advisor.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.AssignAdvisor.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.EvaluationList.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.manageprojects.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.GroupEvaluation.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.Group_Project.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.Group_Students.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.Home.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.ListofProjects.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.Manage_Evaluation.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.Manage_Project.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.Properties.Resources.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.Student.resources
+C:\Git\Mini-Project\FYP1\FYP1\obj\Debug\FYP1.csproj.GenerateResource.Cache
